@@ -81,7 +81,7 @@ I practiced all these commands in a GitHub Codespace (Ubuntu environment).
 6. **High CPU usage**  
    `top` → note PID → `ps aux --sort=-%cpu | head` → `kill <PID>`.
 
----
+
 
 ## Screenshots from My Lab
 
@@ -102,7 +102,7 @@ Below are examples of commands I ran in my Codespace terminal.
 ### journalctl -u ssh – logs for SSH service
 ![journalctl output](images/journalctl output.png)
 
----
+
 
 ## 💡 What I Learned
 
