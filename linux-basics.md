@@ -94,7 +94,7 @@ Below are examples of commands I ran in my Codespace terminal.
 ![ps aux output](images/ps aux output.png)
 
 ## df -h – disk space usage
-![df -h output](images/df -h output.png)
+images/df -h output.png
 
 ## ss -tuln – listening ports
 ![ss -tuln output](images/ss -tuln output.png)
