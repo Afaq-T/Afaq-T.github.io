@@ -88,7 +88,7 @@ I practiced all these commands in a GitHub Codespace (Ubuntu environment).
 Below are examples of commands I ran in my Codespace terminal.
 
 ### ls -la showing file permissions
-![ls -la output](images/ls -la output.png)
+### ![ls -la output](images/ls -la output.png)
 
 ### ps aux – all running processes
 ![ps aux output](images/ps aux output.png)
