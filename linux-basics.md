@@ -83,23 +83,23 @@ I practiced all these commands in a GitHub Codespace (Ubuntu environment).
 
 ---
 
-## 📸 Screenshots from My Lab
+## Screenshots from My Lab
 
-*Below are examples of commands I ran in my Codespace terminal. (Replace the filenames with your actual screenshot files.)*
+Below are examples of commands I ran in my Codespace terminal.
 
-### `ls -la` showing file permissions
+### ls -la showing file permissions
 ![ls -la output](images/ls -la output.png)
 
-### `ps aux` – all running processes
+### ps aux – all running processes
 ![ps aux output](images/ps aux output.png)
 
-### `df -h` – disk space usage
+### df -h – disk space usage
 ![df -h output](images/df -h output.png)
 
-### `ss -tuln` – listening ports
+### ss -tuln – listening ports
 ![ss -tuln output](images/ss -tuln output.png)
 
-### `journalctl -u ssh` – logs for SSH service
+### journalctl -u ssh – logs for SSH service
 ![journalctl output](images/journalctl output.png)
 
 ---
