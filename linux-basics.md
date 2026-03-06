@@ -88,19 +88,19 @@ I practiced all these commands in a GitHub Codespace (Ubuntu environment).
 *Below are examples of commands I ran in my Codespace terminal. (Replace the filenames with your actual screenshot files.)*
 
 ### `ls -la` showing file permissions
-![ls -la output](images/ls-la.png)
+![ls -la output](images/ls -la output.png)
 
 ### `ps aux` – all running processes
-![ps aux output](images/ps-aux.png)
+![ps aux output](images/ps aux output.png)
 
 ### `df -h` – disk space usage
-![df -h output](images/df-h.png)
+![df -h output](images/df -h output.png)
 
 ### `ss -tuln` – listening ports
-![ss -tuln output](images/ss-tuln.png)
+![ss -tuln output](images/ss -tuln output.png)
 
 ### `journalctl -u ssh` – logs for SSH service
-![journalctl output](images/journalctl-ssh.png)
+![journalctl output](images/journalctl output.png)
 
 ---
 
