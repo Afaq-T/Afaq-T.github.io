@@ -5,14 +5,13 @@ I practiced all these commands in a GitHub Codespace (Ubuntu environment).
 
 ---
 
-## 🔧 Key Linux Commands I Learned
-
 ### Navigation & File Management
+
 | Command | Example | What it does |
-|--------|---------|--------------|
+|---------|---------|--------------|
 | `pwd` | `pwd` | Prints the current working directory (where you are in the filesystem). |
 | `ls -la` | `ls -la` | Lists all files (including hidden) with detailed permissions, owner, group, size. |
-| `cd` | `cd /var/log` | Changes directory to the specified path. |
+| `cd /var/log` | `cd /var/log` | Changes directory to the specified path. |
 | `mkdir` | `mkdir ~/lab-week2` | Creates a new directory. |
 | `touch` | `touch test.txt` | Creates an empty file. |
 | `cp` | `cp file1.txt file2.txt` | Copies a file. |
@@ -23,8 +22,9 @@ I practiced all these commands in a GitHub Codespace (Ubuntu environment).
 | `tail -f` | `tail -f /var/log/syslog` | Follows a log file in real time (press Ctrl+C to stop). |
 
 ### Permissions & Users
+
 | Command | Example | What it does |
-|--------|---------|--------------|
+|---------|---------|--------------|
 | `chmod` | `chmod 755 script.sh` | Changes file permissions (owner=rwx, group=rx, others=rx). |
 | `chmod +x` | `chmod +x script.sh` | Makes a file executable. |
 | `whoami` | `whoami` | Shows your current username. |
