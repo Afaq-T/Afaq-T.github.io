@@ -32,8 +32,9 @@ I practiced all these commands in a GitHub Codespace (Ubuntu environment).
 | `sudo` | `sudo apt update` | Runs a command with superuser (administrator) privileges. |
 
 ### System Information & Processes
+
 | Command | Example | What it does |
-|--------|---------|--------------|
+|---------|---------|--------------|
 | `df -h` | `df -h` | Shows disk space usage in human‑readable format (GB, MB). |
 | `free -h` | `free -h` | Displays memory (RAM) usage. |
 | `uptime` | `uptime` | Tells how long the system has been running. |
@@ -42,8 +43,9 @@ I practiced all these commands in a GitHub Codespace (Ubuntu environment).
 | `kill` | `kill 1234` | Stops a process by its PID (use `-9` to force). |
 
 ### Networking
+
 | Command | Example | What it does |
-|--------|---------|--------------|
+|---------|---------|--------------|
 | `ss -tuln` | `ss -tuln` | Lists all listening ports (TCP/UDP, numeric). |
 | `curl -I` | `curl -I https://github.com` | Fetches HTTP headers from a URL. |
 | `dig` | `dig google.com` | Performs a DNS lookup (shows IP address). |
@@ -51,8 +53,9 @@ I practiced all these commands in a GitHub Codespace (Ubuntu environment).
 | `ip addr` | `ip addr` | Shows network interfaces and IP addresses. |
 
 ### Logs & Troubleshooting
+
 | Command | Example | What it does |
-|--------|---------|--------------|
+|---------|---------|--------------|
 | `journalctl -u` | `journalctl -u ssh` | Views logs for a specific system service. |
 | `grep` | `grep error /var/log/syslog` | Searches for a pattern inside a file. |
 | `systemctl status` | `systemctl status nginx` | Checks if a service is running. |
