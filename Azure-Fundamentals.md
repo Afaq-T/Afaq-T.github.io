@@ -142,10 +142,10 @@ Monitors and analyzes your Azure spending. Set budgets, create alerts, and ident
 ## 🗂️ Azure Architecture Diagrams
 
 ### Azure Hierarchy Diagram
-![Azure Hierarchy Diagram](https://afaqt.me/images/Azure-Heirarchy_drawio.png)
+![Azure Hierarchy Diagram](/images/Azure-Heirarchy.drawio.png)
 
 ### Azure Service Map
-![Azure Service Map](https://afaqt.me/images/6-Azure-Services_drawio.png)
+![Azure Service Map](/images/6-Azure-Services.drawio.png)
 
 ---
 
