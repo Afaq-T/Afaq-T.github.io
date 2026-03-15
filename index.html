@@ -1,191 +1,668 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afaq – Cloud & Networking Portfolio</title>
-    <!-- Google Fonts for a modern look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f8fafc;
-            color: #0f172a;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .subhead {
-            font-size: 1.2rem;
-            color: #475569;
-            margin-top: 0.5rem;
-        }
-        .intro {
-            max-width: 700px;
-            margin: 2rem auto 3rem;
-            text-align: center;
-            font-size: 1.1rem;
-            color: #334155;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin: 2.5rem 0;
-        }
-        .skill-badge {
-            background: white;
-            padding: 0.6rem 1.5rem;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-            transition: transform 0.2s ease;
-        }
-        .skill-badge:hover {
-            transform: translateY(-2px);
-            border-color: #2563eb;
-        }
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .card {
-            background: white;
-            border-radius: 24px;
-            padding: 2rem 1.5rem;
-            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            border: 1px solid #e2e8f0;
-            display: block;
-        }
-        .card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 30px 40px -12px rgba(37,99,235,0.2);
-            border-color: #2563eb;
-        }
-        .card h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: #0f172a;
-        }
-        .card p {
-            color: #475569;
-            margin-bottom: 1.5rem;
-        }
-        .card .arrow {
-            font-size: 1.2rem;
-            color: #2563eb;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-        .linux-card {
-            background: linear-gradient(145deg, #ffffff, #f1f5f9);
-            border: 2px solid transparent;
-            background-clip: padding-box;
-        }
-        .azure-card {
-            border-top: 4px solid #0078d4;
-        }
-
-        .azure-card:hover {
-            border-color: #005a9e;
-        }
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid #e2e8f0;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-        @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Afaq Tahir — Cloud & Networking Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #070b14;
+      --surface: #0d1424;
+      --surface2: #111927;
+      --border: rgba(255,255,255,0.07);
+      --border2: rgba(0,120,212,0.3);
+      --text: #e8edf5;
+      --muted: #7a8fa6;
+      --azure: #0090ff;
+      --azure2: #0078d4;
+      --azure-glow: rgba(0,144,255,0.15);
+      --green: #22c55e;
+      --green-dim: rgba(34,197,94,0.12);
+      --accent: #38bdf8;
+      --mono: 'Fira Code', monospace;
+      --display: 'Outfit', sans-serif;
+      --body: 'Plus Jakarta Sans', sans-serif;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(7,11,20,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--azure); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .nav-links a:hover { color: var(--azure); }
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 8rem 2rem 4rem;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,144,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,144,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+      pointer-events: none;
+    }
+    .hero-glow {
+      position: absolute;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,144,255,0.07) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .hero-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--azure-glow);
+      border: 1px solid var(--border2);
+      border-radius: 99px;
+      padding: 0.35rem 1rem;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--azure);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    h1.hero-name {
+      font-family: var(--display);
+      font-size: clamp(3.5rem, 9vw, 6.5rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.25rem;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+    h1.hero-name .highlight {
+      background: linear-gradient(135deg, var(--azure) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-role {
+      font-family: var(--mono);
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+    .hero-role span { color: var(--azure); }
+    .hero-desc {
+      max-width: 540px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.6s 0.3s ease both;
+      font-weight: 300;
+      line-height: 1.9;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--azure2);
+      color: white;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.25s;
+    }
+    .btn-primary:hover {
+      background: var(--azure);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,144,255,0.35);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--text);
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+      transition: all 0.25s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--azure);
+      color: var(--azure);
+      transform: translateY(-2px);
+    }
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      animation: fadeUp 0.6s 0.5s ease both;
+      flex-wrap: wrap;
+    }
+    .stat-num {
+      font-family: var(--display);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--azure);
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* SECTIONS */
+    section { padding: 5rem 2rem; position: relative; z-index: 1; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--azure);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+    /* SKILLS */
+    .skills-section { background: var(--surface); }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    .skill-card:hover {
+      border-color: var(--azure);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,144,255,0.1);
+    }
+    .skill-icon { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .skill-name { font-family: var(--display); font-weight: 700; font-size: 1rem; margin-bottom: 0.25rem; }
+    .skill-desc { font-size: 0.78rem; color: var(--muted); font-family: var(--mono); }
+    /* NOTES */
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .note-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .note-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .note-card.linux::before { background: linear-gradient(90deg, #22c55e, #16a34a); }
+    .note-card.azure::before { background: linear-gradient(90deg, #0090ff, #38bdf8); }
+    .note-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0,144,255,0.3);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+    .note-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .note-title { font-family: var(--display); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .note-desc { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7; }
+    .note-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      background: rgba(0,144,255,0.1);
+      color: var(--azure);
+      border: 1px solid rgba(0,144,255,0.2);
+    }
+    .tag.green {
+      background: var(--green-dim);
+      color: var(--green);
+      border-color: rgba(34,197,94,0.2);
+    }
+    .note-link {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--azure);
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: gap 0.2s;
+    }
+    .note-card:hover .note-link { gap: 0.8rem; }
+    /* CERTIFICATIONS */
+    .cert-section { background: var(--surface); }
+    .progress-overview {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .progress-text { flex: 1; min-width: 200px; }
+    .progress-title { font-family: var(--display); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem; }
+    .progress-sub { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+    .progress-right { text-align: right; }
+    .progress-num { font-family: var(--display); font-size: 2.5rem; font-weight: 800; color: var(--azure); line-height: 1; }
+    .progress-total { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+    .progress-bar {
+      width: 100%; height: 6px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 99px;
+      margin-top: 1rem;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--azure2), var(--accent));
+      border-radius: 99px;
+      width: 0%;
+      transition: width 1.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .cert-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .cert-card:hover {
+      border-color: var(--border2);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .cert-header {
+      padding: 1rem 1.25rem;
+      background: rgba(0,144,255,0.05);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .cert-header-icon { font-size: 1.1rem; }
+    .cert-header-title { font-family: var(--display); font-weight: 700; font-size: 0.85rem; flex: 1; }
+    .cert-badge {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+      background: rgba(34,197,94,0.15);
+      color: var(--green);
+      border: 1px solid rgba(34,197,94,0.3);
+      white-space: nowrap;
+    }
+    .cert-badge.bonus {
+      background: rgba(0,144,255,0.1);
+      color: var(--azure);
+      border-color: rgba(0,144,255,0.2);
+    }
+    .cert-modules { padding: 0.5rem 0; }
+    .cert-module {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.55rem 1.25rem;
+      transition: background 0.15s;
+    }
+    .cert-module:hover { background: rgba(255,255,255,0.02); }
+    .check-icon {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--green-dim);
+      border: 1.5px solid rgba(34,197,94,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .check-icon svg { width: 10px; height: 10px; stroke: var(--green); stroke-width: 2.5; fill: none; }
+    .module-name { font-size: 0.82rem; color: var(--text); opacity: 0.85; flex: 1; }
+    .module-date { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+    /* ROADMAP */
+    .week-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .week-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .week-card.active { border-color: var(--azure); background: linear-gradient(135deg, rgba(0,144,255,0.06), var(--surface)); }
+    .week-card.done { border-color: rgba(34,197,94,0.3); }
+    .week-card:hover { transform: translateY(-3px); }
+    .week-num { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .week-title { font-family: var(--display); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.75rem; }
+    .week-status {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+      display: inline-block;
+    }
+    .week-status.done { background: var(--green-dim); color: var(--green); }
+    .week-status.active { background: rgba(0,144,255,0.1); color: var(--azure); }
+    .week-status.upcoming { background: rgba(255,255,255,0.05); color: var(--muted); }
+    /* FOOTER */
+    footer {
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .footer-name { font-family: var(--display); font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--azure); }
+    .footer-copy { margin-top: 2rem; font-size: 0.8rem; color: var(--muted); font-family: var(--mono); }
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.4,0,0.2,1); }
+    .reveal.visible { opacity: 1; transform: none; }
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 1rem; }
+      .nav-links { display: none; }
+      .hero { padding: 6rem 1.25rem 3rem; }
+      section { padding: 3.5rem 1.25rem; }
+      .hero-stats { gap: 1.5rem; }
+      .progress-overview { flex-direction: column; gap: 1rem; }
+      .progress-right { text-align: left; }
+      .module-date { display: none; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Afaq</h1>
-            <div class="subhead">Cloud & Networking Engineer in the making</div>
-        </header>
 
-        <section class="intro">
-            <p>
-                Passionate about building reliable cloud infrastructure and networks. 
-                Currently following a 16‑week roadmap to master Azure, Linux, and automation.
-            </p>
-        </section>
+<nav>
+  <div class="nav-logo">Afaq<span>.</span>Tahir</div>
+  <ul class="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#notes">Notes</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="https://github.com/Afaq-T/Cloud-Learning-Journal" target="_blank">GitHub →</a></li>
+  </ul>
+</nav>
 
-        <div class="skills">
-            <span class="skill-badge">☁️ Azure</span>
-            <span class="skill-badge">🐧 Linux</span>
-            <span class="skill-badge">🌐 Networking</span>
-            <span class="skill-badge">🔐 Security</span>
-            <span class="skill-badge">⚙️ Automation</span>
-        </div>
-
-        <!-- Featured Project Card -->
-        <div class="card-grid">
-            <a href="linux-basics" class="card linux-card">
-                <h3>🐧 Linux Basics</h3>
-                <p>
-                    Essential commands, filesystem navigation, process management, and troubleshooting scenarios.
-                    Screenshots from my Codespace lab included.
-                </p>
-                <div class="arrow">
-                    Explore Linux notes <span style="font-size: 1.4rem;">→</span>
-                </div>
-            </a>
-
-            <a href="Azure-Fundamentals" class="card Azure-card">
-                <h3>☁️ Azure-Fundamentals</h3>
-                <p>
-                    Core cloud concepts, Azure hierarchy, six service categories,
-                    identity, governance, and pricing — AZ-900 level notes
-                    with diagrams and quiz.
-                </p>
-                <div class="arrow">
-                    Explore Azure notes <span style="font-size: 1.4rem;">→</span>
-                </div>
-            </a>
-            <!-- You can add more cards later, e.g., Azure notes -->
-        </div>
-
-        <footer>
-            <p>📚 Learning in public · 16‑week roadmap · <a href="https://github.com/Afaq-T/Cloud-Learning-Journal" style="color: #2563eb; text-decoration: none;">GitHub journal</a></p>
-        </footer>
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">🟢 Open to opportunities · Rawalpindi, Pakistan</div>
+    <h1 class="hero-name">Afaq<br><span class="highlight">Tahir</span></h1>
+    <div class="hero-role">// <span>Cloud & Networking Engineer</span> in the making</div>
+    <p class="hero-desc">BS Information Technology at Gordon College Rawalpindi. Building real cloud engineering skills through a 6-week accelerated roadmap — Azure, Linux, networking, and automation.</p>
+    <div class="hero-cta">
+      <a href="https://github.com/Afaq-T/Cloud-Learning-Journal" target="_blank" class="btn-primary">📁 GitHub Journal</a>
+      <a href="#notes" class="btn-secondary">Explore Notes →</a>
     </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">15</div><div class="stat-label">modules completed</div></div>
+      <div><div class="stat-num">90%</div><div class="stat-label">AZ-900 quiz score</div></div>
+      <div><div class="stat-num">W3</div><div class="stat-label">current week</div></div>
+      <div><div class="stat-num">6wk</div><div class="stat-label">roadmap</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="skills-section" id="skills">
+  <div class="container">
+    <div class="section-label reveal">// skills</div>
+    <h2 class="section-title reveal">What I'm Building</h2>
+    <p class="section-subtitle reveal">Core competencies developed through hands-on labs and structured learning.</p>
+    <div class="skills-grid">
+      <div class="skill-card reveal"><div class="skill-icon">☁️</div><div class="skill-name">Azure</div><div class="skill-desc">AZ-900 · VMs · VNets · Entra ID · RBAC</div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🐧</div><div class="skill-name">Linux</div><div class="skill-desc">Ubuntu · systemctl · logs · permissions</div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🌐</div><div class="skill-name">Networking</div><div class="skill-desc">TCP/IP · DNS · DHCP · VPN · Subnetting</div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🔐</div><div class="skill-name">Security</div><div class="skill-desc">MFA · Zero Trust · NSGs · Key Vault</div></div>
+      <div class="skill-card reveal"><div class="skill-icon">⚙️</div><div class="skill-name">Automation</div><div class="skill-desc">PowerShell · Azure CLI · Python basics</div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🎫</div><div class="skill-name">Ticketing</div><div class="skill-desc">Freshdesk · ITIL basics · SLA management</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="notes">
+  <div class="container">
+    <div class="section-label reveal">// notes & labs</div>
+    <h2 class="section-title reveal">Learning Journal</h2>
+    <p class="section-subtitle reveal">Detailed notes and lab walkthroughs from each week of the roadmap.</p>
+    <div class="notes-grid">
+      <a href="linux-basics" class="note-card linux reveal">
+        <div class="note-icon">🐧</div>
+        <div class="note-title">Linux Basics</div>
+        <div class="note-desc">Essential commands, filesystem navigation, process management, and troubleshooting scenarios. Screenshots from my GitHub Codespace lab included.</div>
+        <div class="note-tags"><span class="tag green">Week 2</span><span class="tag green">Commands</span><span class="tag green">Troubleshooting</span><span class="tag green">Lab</span></div>
+        <div class="note-link">Explore Linux notes <span>→</span></div>
+      </a>
+      <a href="Azure-Fundamentals" class="note-card azure reveal">
+        <div class="note-icon">☁️</div>
+        <div class="note-title">Azure Fundamentals</div>
+        <div class="note-desc">Core cloud concepts, Azure hierarchy, six service categories, identity, governance, and pricing — AZ-900 level notes with architecture diagrams and quiz.</div>
+        <div class="note-tags"><span class="tag">Week 3</span><span class="tag">AZ-900</span><span class="tag">Entra ID</span><span class="tag">RBAC</span><span class="tag">Diagrams</span></div>
+        <div class="note-link">Explore Azure notes <span>→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cert-section" id="certifications">
+  <div class="container">
+    <div class="section-label reveal">// certifications</div>
+    <h2 class="section-title reveal">Microsoft Learn Progress</h2>
+    <p class="section-subtitle reveal">All AZ-900 Azure Fundamentals modules completed across all 3 learning paths.</p>
+    <div class="progress-overview reveal">
+      <div class="progress-text">
+        <div class="progress-title">AZ-900 — Azure Fundamentals (All 3 Paths)</div>
+        <div class="progress-sub">15 modules · Completed March 2026</div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+      <div class="progress-right">
+        <div class="progress-num">15</div>
+        <div class="progress-total">of 15 modules ✅</div>
+      </div>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="cert-header"><span class="cert-header-icon">☁️</span><span class="cert-header-title">Part 1 — Cloud Concepts</span><span class="cert-badge">COMPLETE</span></div>
+        <div class="cert-modules">
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe cloud computing</span><span class="module-date">Mar 15</span></div>
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe the benefits of using cloud services</span><span class="module-date">Mar 15</span></div>
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe cloud service types</span><span class="module-date">Mar 15</span></div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-header"><span class="cert-header-icon">🏗️</span><span class="cert-header-title">Part 2 — Architecture & Services</span><span class="cert-badge">COMPLETE</span></div>
+        <div class="cert-modules">
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe core architectural components of Azure</span><span class="module-date">Mar 15</span></div>
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe Azure compute and networking services</span><span class="module-date">Mar 15</span></div>
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe Azure storage services</span><span class="module-date">Mar 14</span></div>
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe Azure identity, access, and security</span><span class="module-date">Mar 15</span></div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-header"><span class="cert-header-icon">⚙️</span><span class="cert-header-title">Part 3 — Management & Governance</span><span class="cert-badge">COMPLETE</span></div>
+        <div class="cert-modules">
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe cost management in Azure</span><span class="module-date">Mar 15</span></div>
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe features and tools for governance and compliance</span><span class="module-date">Mar 15</span></div>
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe features and tools for managing and deploying Azure resources</span><span class="module-date">Mar 15</span></div>
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Describe monitoring tools in Azure</span><span class="module-date">Mar 15</span></div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-header"><span class="cert-header-icon">⭐</span><span class="cert-header-title">Bonus — Extra Modules</span><span class="cert-badge bonus">BONUS</span></div>
+        <div class="cert-modules">
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Introduction to Microsoft Cloud Adoption Framework</span><span class="module-date">Mar 15</span></div>
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">Introduction to Azure Well-Architected Framework</span><span class="module-date">Mar 15</span></div>
+          <div class="cert-module"><div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span class="module-name">AZ-305 Azure Architect Design Prerequisites</span><span class="module-date">Mar 15</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap">
+  <div class="container">
+    <div class="section-label reveal">// roadmap</div>
+    <h2 class="section-title reveal">6-Week Learning Plan</h2>
+    <p class="section-subtitle reveal">Accelerated cloud engineering roadmap — fundamentals to job-ready.</p>
+    <div class="week-grid">
+      <div class="week-card done reveal"><div class="week-num">// WEEK 01–02</div><div class="week-title">Networking + Linux Fundamentals</div><div class="week-status done">✅ Complete</div></div>
+      <div class="week-card active reveal"><div class="week-num">// WEEK 03</div><div class="week-title">Azure Fundamentals (AZ-900)</div><div class="week-status active">⚡ Current</div></div>
+      <div class="week-card reveal"><div class="week-num">// WEEK 04</div><div class="week-title">Identity + Entra ID + Apply</div><div class="week-status upcoming">🔜 Next</div></div>
+      <div class="week-card reveal"><div class="week-num">// WEEK 05</div><div class="week-title">Azure Networking + Python</div><div class="week-status upcoming">🔜 Upcoming</div></div>
+      <div class="week-card reveal"><div class="week-num">// WEEK 06</div><div class="week-title">Security + AWS + Capstone</div><div class="week-status upcoming">🔜 Upcoming</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Afaq <span style="color:var(--azure)">Tahir</span></div>
+  <p style="color:var(--muted);font-size:0.875rem;margin-top:0.25rem;">Cloud & Networking Engineer · Rawalpindi, Pakistan · BS IT — Gordon College</p>
+  <div class="footer-links">
+    <a href="https://github.com/Afaq-T/Cloud-Learning-Journal" target="_blank">📁 GitHub Journal</a>
+    <a href="linux-basics">🐧 Linux Notes</a>
+    <a href="Azure-Fundamentals">☁️ Azure Notes</a>
+  </div>
+  <p class="footer-copy">© 2026 Afaq Tahir · Learning in public · 6-week accelerated roadmap</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Progress bar
+  const fill = document.getElementById('progressFill');
+  new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) setTimeout(() => fill.style.width = '100%', 300);
+  }).observe(fill);
+</script>
 </body>
 </html>
