@@ -29,7 +29,7 @@
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { font-family:var(--sans); background:var(--bg); color:var(--text); line-height:1.65; overflow-x:hidden; }
-
+ 
     /* ══ NAV ══ */
     nav {
       position:fixed; top:0; left:0; right:0; z-index:200;
@@ -60,7 +60,7 @@
     }
     .nav-cta:hover { background:#1f2937; transform:translateY(-1px); }
     .nav-cta svg { width:14px; height:14px; fill:#fff; }
-
+ 
     /* ══ HERO ══ */
     .hero {
       padding: 7rem 2rem 5rem;
@@ -107,7 +107,7 @@
       border:1.5px solid var(--border2); transition:all .2s;
     }
     .btn-ghost:hover { border-color:var(--blue); color:var(--blue); transform:translateY(-2px); }
-
+ 
     /* Stats */
     .stats-box { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
     .stat {
@@ -124,7 +124,7 @@
     .stat-n.c4 { color:var(--orange); }
     .stat-l { font-size:0.875rem; font-weight:700; color:var(--text); }
     .stat-s { font-size:0.75rem; color:var(--muted); margin-top:0.15rem; }
-
+ 
     /* ══ SHARED SECTION ══ */
     .sec { padding:5rem 2rem; }
     .sec-inner { max-width:1160px; margin:0 auto; }
@@ -141,7 +141,7 @@
     .sec-head-center { text-align:center; }
     .sec-head-center .sec-desc { margin:0 auto; }
     hr.div { border:none; border-top:1px solid var(--border); max-width:1160px; margin:0 auto; }
-
+ 
     /* ══ SKILLS ══ */
     .skills-bg { background:var(--white); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
     .skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:3rem; }
@@ -171,7 +171,7 @@
       background:var(--white); border:1px solid var(--border);
       color:var(--sub);
     }
-
+ 
     /* ══ NOTES ══ */
     .notes-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:3rem; }
     .note-card {
@@ -200,7 +200,7 @@
     .note-desc { font-size:0.85rem; color:var(--muted); line-height:1.75; margin-bottom:1.25rem; }
     .note-link { font-size:0.85rem; font-weight:700; color:var(--blue); display:inline-flex; align-items:center; gap:0.35rem; transition:gap .2s; }
     .note-card:hover .note-link { gap:0.65rem; }
-
+ 
     /* ══ CERTS ══ */
     .cert-bg { background:var(--white); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
     .cert-main {
@@ -255,7 +255,7 @@
     .chk svg { width:9px; height:9px; stroke:var(--green); stroke-width:2.5; fill:none; }
     .mod-n { font-size:0.78rem; color:var(--text); flex:1; opacity:.85; }
     .mod-d { font-size:0.68rem; color:var(--muted); font-family:var(--mono); }
-
+ 
     /* Exam banner */
     .exam {
       margin-top:1.75rem; background:var(--text);
@@ -272,7 +272,7 @@
       transition:all .2s; white-space:nowrap;
     }
     .btn-exam:hover { background:#f3f4f6; transform:translateY(-1px); }
-
+ 
     /* ══ ROADMAP ══ */
     .roadmap-list {
       margin-top:2.5rem; border:1px solid var(--border);
@@ -300,7 +300,7 @@
     .wb.done { background:var(--green-bg); color:var(--green); border:1px solid var(--green-b); }
     .wb.cur  { background:var(--blue-bg);  color:var(--blue);  border:1px solid var(--blue-b); }
     .wb.soon { background:var(--light);    color:var(--muted); border:1px solid var(--border); }
-
+ 
     /* ══ FOOTER ══ */
     footer {
       background:var(--text); color:#fff;
@@ -319,11 +319,11 @@
     .ft-links a { font-size:0.85rem; color:rgba(255,255,255,.45); text-decoration:none; transition:color .2s; }
     .ft-links a:hover { color:#fff; }
     .ft-copy { font-size:0.76rem; color:rgba(255,255,255,.2); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; }
-
+ 
     /* ══ REVEAL ══ */
     .r { opacity:0; transform:translateY(22px); transition:all .65s cubic-bezier(.4,0,.2,1); }
     .r.on { opacity:1; transform:none; }
-
+ 
     /* ══ RESPONSIVE ══ */
     @media(max-width:960px){
       .hero { grid-template-columns:1fr; min-height:auto; gap:3rem; padding:6rem 1.5rem 4rem; }
@@ -344,7 +344,7 @@
   </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-brand">
@@ -365,7 +365,7 @@
     GitHub
   </a>
 </nav>
-
+ 
 <!-- HERO -->
 <div style="max-width:1160px;margin:0 auto;">
   <div class="hero">
@@ -407,7 +407,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- SKILLS -->
 <div class="skills-bg">
   <div class="sec" id="skills">
@@ -458,7 +458,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- NOTES -->
 <div class="sec" id="notes">
   <div class="sec-inner">
@@ -507,7 +507,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- CERTIFICATIONS -->
 <div class="cert-bg">
   <div class="sec" id="certifications">
@@ -578,7 +578,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- ROADMAP -->
 <div class="sec" id="roadmap">
   <div class="sec-inner">
@@ -621,7 +621,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- FOOTER -->
 <footer>
   <div class="ft">
@@ -642,7 +642,7 @@
     </div>
   </div>
 </footer>
-
+ 
 <script>
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
@@ -650,7 +650,7 @@
     });
   }, { threshold: 0.08 });
   document.querySelectorAll('.r').forEach(el => obs.observe(el));
-
+ 
   new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) setTimeout(() => document.getElementById('pf').style.width = '100%', 300);
   }, { threshold: 0.4 }).observe(document.getElementById('pf'));
