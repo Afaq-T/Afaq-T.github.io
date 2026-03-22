@@ -193,5 +193,3 @@ I tested my knowledge with 30 AZ-900-style questions covering all Week 3 topics.
 ---
 
 I now understand Azure fundamentals at AZ-900 level — enough to explain cloud concepts, navigate the Azure portal, and answer identity and governance questions in technical interviews.
-
-This site is open source. [Improve this page](https://github.com/Afaq-T/Afaq-T.github.io/edit/main/azure-fundamentals.md).
